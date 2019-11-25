@@ -1,0 +1,18 @@
+.posts{
+    margin-top: 80px;
+}
+.posts h1{
+    text-transform: capitalize;
+}
+.jumbotron {
+    padding: 1rem 1rem;
+}
+.created span{
+    float: right;
+}
+.post a{
+  color: #212529
+}
+.post a:hover{
+    text-decoration: none;
+  }

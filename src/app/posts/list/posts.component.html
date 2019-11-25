@@ -1,0 +1,20 @@
+<div class="post" >
+        <h1>{{ post.title }}</h1>
+    <p class="created"> 
+       
+    <span class="pull-right">Published on {{ post.created | date :  "MMM d, y" }} </span>
+    <span>by</span> <span ng-if="!empty(post.createdBy)">  {{ post.createdBy.email  }}  </span>
+    </p>
+   
+    
+    <p [innerHTML]="post.body"></p>
+    <p class="tags"> <span >Tags:&nbsp;&nbsp; </span>{{ post.tags}}  
+    
+     
+    
+    </p>
+  
+</div>
+  <comments></comments>
+  
+ 

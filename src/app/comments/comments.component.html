@@ -1,0 +1,21 @@
+<div class="comments">
+    <form [formGroup]="commentForm" (ngSubmit)="saveComment()" class="text-center  p-1">
+        <p class="h4 mb-4 comment-title">Add a new comment</p>
+        <div class="form-row mb-4">
+            <label for="comment">Comment:</label>
+            <textarea formControlName="body" class="form-control" rows="5"></textarea>
+             
+        </div>
+    <button class="btn btn-primary" type="submit"  >Submit</button>
+    </form>
+
+ <div class="user-comments ">
+        <div class="comment" *ngFor="let item of comments | keyvalue">
+           <p class="lead">  {{ item.value.body }} </p> 
+           <p class="created"><span>{{ item.value.created  | date :  "MMM d, y hh:mm:ss" }} </span> </p> 
+        </div>
+  </div>
+
+
+</div>  
+

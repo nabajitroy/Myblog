@@ -1,0 +1,19 @@
+<div class="create" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+<h2>Update post</h2>       
+<form  [formGroup]="postForm"   (ngSubmit)="updatePost()" class="text-center ">
+    <div class="form-row mb-4 p-2">
+        <label for="comment">Title:</label>
+        <input formControlName="title" type="text" class="form-control">
+    </div>
+    <div class="form-row mb-4">
+        <label for="comment">Body:</label>
+        <angular-editor formControlName="body" [config]="editorConfig"></angular-editor>
+        
+    </div>
+    <div class="form-row mb-4">
+        <label for="comment">Tags:</label>
+        <input formControlName="tags" type="text" class="form-control">
+    </div>
+<button class="btn btn-primary" type="submit"  >Submit</button>
+</form>
+</div>

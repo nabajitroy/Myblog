@@ -1,0 +1,23 @@
+<div class="posts" >
+  <div class="post" *ngFor="let post of posts">
+   <a [routerLink]="['/post', post._id]">
+   <p class="created"> 
+    <span>Published on {{ post.created | date :  "MMM d, y" }}  by   {{post.createdBy?.email}}   </span>
+   </p>
+    <h1>{{ post.title }}</h1>
+    <p class="lead" [innerHTML]= post.body></p>
+    <p class="tags"> {{ post.tags }}  </p>
+  </a>
+    <p class="actions">
+      <span><a [routerLink]="['/update-post', post._id]">  Edit </a> </span>
+      <span> 
+        <app-delete [postId]="post._id"  ></app-delete>  
+      </span>
+    </p>
+ 
+</div>
+
+</div>
+
+  
+
